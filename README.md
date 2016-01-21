@@ -3,6 +3,8 @@ Docker container for spark stand alone cluster
 
 This repository contains a set of scripts and configuration files to run a [Apache Spark](https://spark.apache.org/) standalone cluster from [Docker](https://www.docker.io/) container.
 
+**Upgraded to Spark 1.6, Scala 2.11.7**
+
 To run master execute:
 
 ```
