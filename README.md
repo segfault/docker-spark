@@ -5,6 +5,7 @@ This repository contains a set of scripts and configuration files to run a [Apac
 
 **Upgraded to Spark 1.6, Scala 2.11.7**
 
+
 To run master execute:
 
 ```
