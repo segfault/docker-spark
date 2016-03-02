@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cd /usr/local/spark
 SPARK_MASTER_PORT_7077_TCP_ADDR=`getent hosts spark_master | awk '{ print $1 }'`
-export SPARK_LOCAL_IP=`awk 'END {print $1}' /etc/hosts`
+export SPARK_LOCAL_IP=`hostname -I | awk '{print $1}'`
 ./bin/spark-class org.apache.spark.deploy.worker.Worker \
 	spark://${SPARK_MASTER_PORT_7077_TCP_ADDR}:${SPARK_MASTER_ENV_SPARK_MASTER_PORT:-7077}  \
 	--properties-file /spark-defaults.conf \
